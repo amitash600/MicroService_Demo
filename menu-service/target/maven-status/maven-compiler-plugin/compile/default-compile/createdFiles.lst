@@ -1,0 +1,15 @@
+com\food\menu\entity\MenuItem.class
+com\food\menu\error\NoRecordFoundException.class
+com\food\menu\client\OrderItemClient.class
+com\food\menu\error\IdNotFoundException.class
+com\food\menu\entity\Restaurant.class
+com\food\menu\error\GlobalExceptionHandler.class
+com\food\menu\dao\MenuItemDao.class
+com\food\menu\MenuServiceApplication.class
+com\food\menu\repository\MenuItemRepository.class
+com\food\menu\controller\MenuItemController.class
+com\food\menu\dto\ResponseStructure.class
+com\food\menu\service\MenuItemService.class
+com\food\menu\dto\MenuItemRequest.class
+com\food\menu\dto\MenuItemRequest$RestaurantRef.class
+com\food\menu\client\RestaurantClient.class

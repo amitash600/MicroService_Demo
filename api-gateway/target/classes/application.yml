@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: restaurant-service
+              uri: lb://restaurant-service
+              predicates:
+                - Path=/restaurant/**
+            - id: menu-service
+              uri: lb://menu-service
+              predicates:
+                - Path=/menuItem/**
+            - id: customer-service
+              uri: lb://customer-service
+              predicates:
+                - Path=/customer/**
+            - id: order-service
+              uri: lb://order-service
+              predicates:
+                - Path=/order/**
+            - id: order-item-service
+              uri: lb://order-service
+              predicates:
+                - Path=/orderItem/**
+            - id: payment-service
+              uri: lb://payment-service
+              predicates:
+                - Path=/payment/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
